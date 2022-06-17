@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Employee[] employee = new Employee[10];
@@ -11,8 +13,6 @@ public class Main {
         employee[7] = new Employee(" Kirkorov Vladimir Ostapovich ", 33000, 3);
         employee[8] = new Employee(" Kirienko Viktor Viktorovich ", 78000, 4);
         employee[9] = new Employee(" Medvedev Dmitriy Ivanovich ", 140000, 5);
-        for (int i = 0; i < employee.length; i++) {
-            System.out.println(employee[i]);
-        }
+        System.out.println(Arrays.stream(employee).forEach(System.out::println));
     }
 }
